@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
-  "sideEffect" : false,
+  "sideEffect": false,
   "scripts": {
-    "prepare": "tsc -p tsconfig.json",
-    "start": "node lib/index.js"
+    "clean" : "rm -rf ./lib && rm -rf node_modules",
+    "prepare": "npx tsc -p tsconfig.json",
+    "start": "node ./lib/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/github": "^5.1.1",
+    "@actions/github": "^5.1.1"
+  },
+  "devDependencies": {
     "typescript": "^5.0.4"
   }
 }
